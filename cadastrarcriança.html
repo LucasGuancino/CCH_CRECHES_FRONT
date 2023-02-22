@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+	body{
+		background-image: url(fundo.png);
+		background-attachment: scroll;
+	}
+    .divprincipal{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .central{
+        display: flex;
+        justify-content: center;
+    }
+    #tela{
+
+        background-color: rgb(247, 247, 247);
+        border-radius: 5px;  
+        width: 17.5%;   
+        height: 100%;
+         
+    }
+    .botao{
+        margin-top: 7%;
+        margin-left: 9.5%;
+        margin-bottom: 4%;
+        border-radius: 5px;
+        background-color: lightblue;
+        border: solid 2px;
+    }
+    label{
+        min-width: none;
+        max-width: 800px;
+        margin-top: 5%;
+        margin-left: 2%;        
+    }
+    input{
+        margin-top: 0%;
+        margin-left: 2%;      
+        width: 80%; 
+    }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="logo.png" width="65" height="35" alt="">
+                </a>                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Cadastrar Criança</a>
+                        </li>
+                        <li class="nav-item">
+                            <a onclick="voltar()" class="nav-link" href="#">Voltar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Login.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+    </nav>
+	<div class="divprincipal">
+        <div class="central">
+            <div id="tela">
+                <div>
+                    <center><h3>Cadastrar Criança</h3></center>
+                    <label>Nome da criança:</label>
+                    <br>
+                    <input type ="text" value="Insira o nome da criança">  
+                    <br>   
+                    <label>Idade da criança:</label>
+                    <br>
+                    <input type ="number">  
+                    <br>
+                    <label> RG: </label>   
+                    <br>
+                    <input type="text" value="Insira o RG da criança ">   
+                    <br>    
+                    <label> Nome de um responsável: </label>     
+                    <br>
+                    <input type ="text" value="Insira o nome de um responsável">  
+                    <br>
+                    <label> Insira o telefone do responsavel: </label>     
+                    <br>
+                    <input type ="tel">  
+                    <br>
+                    <label>CEP:</label>
+                    <br>
+                    <input type ="number">  
+                    <br>   
+                    <label>Estado:</label>
+                    <br>
+                    <input type ="text">  
+                    <br>
+                    <label>Cidade:</label>   
+                    <br>
+                    <input type="text">   
+                    <br>    
+                    <label>Bairro:</label>   
+                    <br>
+                    <input type="text">   
+                    <br>    
+                    <label>Rua:</label>   
+                    <br>
+                    <input type="text">   
+                    <br>    
+                    <label> Anexe um comprovante de residência: </label>   
+                    <br>
+                    <label> Envie o comprovante de residência </label> 
+                    <br>
+                    <input type="file" value="Inserir comprovante">   
+                    <br>                    
+                    <input type="submit" class="botao" value="Cadastrar criança">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function voltar() {
+            window.history.back();
+        }
+    </script>    
+</body>
+</html>

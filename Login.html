@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+	body{
+		background-image: url(fundo1.png);
+		background-attachment: scroll;
+	}
+    .divprincipal{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .central{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #tela{
+        background-color: white;
+        border-radius: 5px;      
+        width:15%;
+    }
+    .botao{
+        margin-top: 10%;
+        margin-left: 30%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        background-color: lightblue;
+        border: solid 1px;
+    }
+    label{
+        margin-top: 5%;
+        margin-left: 5%;        
+    }
+    input{
+        margin-top: 0%;
+        margin-left: 5%;            
+    }
+    h3{
+        margin-top: 5%;
+        margin-left: 5%;            
+    }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">
+                    <img src="logo.png" width="65" height="35" alt="">
+                </a>                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Logar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="VerMapa.html">Mapa de creches</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="AcessarRelatorios.html">Vagas Disponiveis</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+    </nav>
+	<div class="divprincipal">        
+        <div class="central"> 
+            <img src="logo.png" width="33%">        
+            <div id="tela">
+                    <center><h3> Login </h3></center>
+                    <label><b>Email:</b></label> <br>
+                    <input type ="email" value="Insira seu Email"> <br>                   
+                    <label><b>Senha:</b></label> <br>
+                    <input type ="password" value=""><br>  
+                    <input onclick="AtribuirLinkResp()" type="radio" id="responsavel" name="fav_language" value="responsavel">
+                    <label for="responsavel">Pai/Responsável</label><br>
+                    <input onclick="AtribuirLinkDir()" type="radio" id="diretor" name="fav_language" value="diretor">
+                    <label for="diretor">Diretor</label><br>
+                    <input onclick="AtribuirLinkAdm()" type="radio" id="administrador" name="fav_language" value="administrador">
+                    <label for="administrador">Administrador</label>                    
+                    <a id="linkbtn" href=""><input type="submit" class="botao" value="Logar"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function AtribuirLinkResp(){
+            var link = document.getElementById("linkbtn");
+            link.href="PerfilPaisResp.html";
+        }
+        function AtribuirLinkDir(){
+            var link = document.getElementById("linkbtn");
+            link.href="PerfilDiretor.html";
+        }
+        function AtribuirLinkAdm(){
+            var link = document.getElementById("linkbtn");
+            link.href="PerfilAdm.html";
+        }
+    </script>
+</body>
+</html>

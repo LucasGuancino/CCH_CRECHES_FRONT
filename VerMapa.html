@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<style>
+	body{
+		background-image: url(fundo1.png);
+		background-attachment: scroll;
+	}
+    .divprincipal{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        align-content: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .central{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #painel1{
+        background-color: white;
+        border-radius: 5px;      
+        width:35%;
+    }
+    #painel2{
+        background-color: white;
+        border-radius: 5px;      
+        width:15%;
+    }
+    .botao{
+        margin-top: 10%;
+        margin-left: 30%;
+        margin-bottom: 5%;
+        border-radius: 5px;
+        background-color: lightblue;
+        border: solid 1px;
+    }
+    label{
+        margin-top: 5%;
+        margin-left: 5%;        
+    }
+    input{
+        margin-top: 1%;
+        margin-left: 5%;   
+        margin-bottom: 2%;         
+    }
+    h3{
+        margin-top: 5%;
+        margin-left: 5%;            
+    }
+</style>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="">
+                    <img src="logo.png" width="65" height="35" alt="">
+                </a>                
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Ver Mapa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a onclick="voltar()" class="nav-link" href="#">Voltar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Login.html">Sair</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </nav>
+    </nav>
+	<div class="divprincipal">        
+        <div class="central"> 
+            <div id="painel1">
+                <center>
+                    <label> Informe o Bairro da criança:</label><br>
+                    <input type ="search" value="Inserir Bairro">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d17047.436546036348!2d-53.0527136768232!3d-26.073377730107104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94f00d2e391393f1%3A0x6eb1e1ced7a51036!2sEscola%20Ciranda%20Cirandinha!5e0!3m2!1spt-BR!2sbr!4v1656033186523!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>      
+                </center>
+            </div>            
+            <div id="painel2">
+                    <center><h3> Informações da Creche</h3></center>
+                    <center><img src="semfoto.png" width="50px" height="50px"><br></center>                    
+                    <label><b>Nome:</b></label> <br>              
+                    <label><b>Endereço:</b></label> <br>
+                    <label><b>Vagas Disponiveis:</b></label><br>
+                    <a id="linkbtn" href="matricularcriança.html"><input type="submit" class="botao" value="Selecionar esta creche"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function voltar() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>
